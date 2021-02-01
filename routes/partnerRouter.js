@@ -23,7 +23,8 @@ partnersRouter.route('/')
     res.end('Deleting all partners');
 });
 
-//:partnerId
+//:partnersId
+
 partnersRouter.route('/:partnersId')
 .all((req, res, next) => {
     res.statusCode = 200;
@@ -43,7 +44,7 @@ partnersRouter.route('/:partnersId')
         with description: ${req.body.description}`);
 })
 .delete((req, res) => {
-    res.end(`Deleting partners: ${req.params.partnersId}`);
+    res.end(`Deleting partners: ${req.params.partnerId}`);
 });
 
 module.exports = partnersRouter

@@ -1,6 +1,8 @@
 const express = require('express');
 const campsiteRouter = express.Router();
 
+//campsite
+
 campsiteRouter.route('/')
 .all((req, res, next) => {
     res.statusCode = 200;

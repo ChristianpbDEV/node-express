@@ -23,7 +23,7 @@ promotionsRouter.route('/')
     res.end('Deleting all promotions');
 });
 
-//promotionId
+//promotionsId
 
 promotionsRouter.route('/:promotionsId')
 .all((req, res, next) => {
