@@ -32,19 +32,19 @@ partnersRouter.route('/:partnersId')
     next();
 })
 .get((req, res) => {
-    res.end(`Will send details of the partners: ${req.params.partnerId} to you`);
+    res.end(`Will send details of the partners: ${req.params.partnersId} to you`);
 })
 .post((req, res) => {
     res.statusCode = 403;
-    res.end(`POST operation not supported on /partners/${req.params.partnerId}`);
+    res.end(`POST operation not supported on /partners/${req.params.partnersId}`);
 })
 .put((req, res) => {
-    res.write(`Updating the partners: ${req.params.partnerId}\n`);
+    res.write(`Updating the partners: ${req.params.partnersId}\n`);
     res.end(`Will update the partners: ${req.body.name}
         with description: ${req.body.description}`);
 })
 .delete((req, res) => {
-    res.end(`Deleting partners: ${req.params.partnerId}`);
+    res.end(`Deleting partners: ${req.params.partnersId}`);
 });
 
 module.exports = partnersRouter
